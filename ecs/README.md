@@ -136,3 +136,5 @@ Port Mapping: Adicione a porta do container que deverá ser exposta para o host.
 ### TO DO
 
 * Como apagar o ambiente criado
+* Adicionar informações para health check
+* Incluir réplicas e auto scale
