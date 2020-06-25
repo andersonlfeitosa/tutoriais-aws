@@ -7,7 +7,7 @@ Um guia visual prático, passo-a-passo, para criar um reposiório de imagens [Do
 
 Esse guia não precisa de nenhum pré-requisito. 
 
-## CRIANDO O AMBIENTE
+## CRIANDO O REPOSITÓRIO
 
 1. Acesse o https://console.aws.amazon.com/ para fazer o login na [AWS](https://aws.amazon.com/).
 
