@@ -113,5 +113,3 @@ artifacts:
 ### TO DO
 
 * Como excluir o build project criado
-* Como excluir o 
-* Incluir réplicas e auto scale
