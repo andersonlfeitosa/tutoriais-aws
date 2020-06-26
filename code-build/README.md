@@ -76,6 +76,10 @@ Clique em Create build project para seguir para o próxima tela.
 
 ![Image](images/7.png)
 
+8. O resultado dessa build poderá ser visualizado no [AWS ECR](https://aws.amazon.com/ecr/) especificado no [buildspec.yml](#BUILDSPEC).
+
+![Image](images/8.png)
+
 
 
 ## BUILDSPEC
