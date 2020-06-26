@@ -94,16 +94,17 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=248277115365.dkr.ecr.us-east-1.amazonaws.com
+      - IMAGE_NAME=$REPOSITORY_URI/greetings
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
       - echo Build started on `date`
       - mvn -B package docker:build docker:push -Ddocker.registry=$REPOSITORY_URI
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
+      - docker push $IMAGE_NAME:$IMAGE_TAG
   post_build:
     commands:
-      - printf '[{"name":"greetings","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"greetings","imageUri":"%s"}]' $IMAGE_NAME:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
