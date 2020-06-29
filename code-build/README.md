@@ -118,3 +118,4 @@ artifacts:
 ### TO DO
 
 * Como excluir o build project criado
+* Adicionar o passo-a-passo para incluir a role AmazonEC2ContainerRegistryFullAccess para o service-role.
